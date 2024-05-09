@@ -1,5 +1,12 @@
-<div class="grid h-screen place-items-center">
-  <div class="font-bold text-3xl">
-    Fyle Internship Challenge
-  </div>
+<app-navbar></app-navbar>
+<app-searchbar (onSearchUser)="getusername($event)"></app-searchbar>
+
+
+
+<div class="" *ngIf="username !== ''">
+  <app-profilepage [username]="username"></app-profilepage>
 </div>
+
+
+
+<!-- </div> -->

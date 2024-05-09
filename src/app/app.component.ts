@@ -6,12 +6,26 @@ import { ApiService } from './services/api.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
+  username: string = "";
+  title = 'fyle-challenge';
+
   constructor(
     private apiService: ApiService
-  ) {}
+  ) { }
+
+
+  
+
+  getusername(username: string){
+    this.username = username;
+  }
+  
+
+
+
+
 
   ngOnInit() {
-    this.apiService.getUser('johnpapa').subscribe(console.log);
   }
 }
